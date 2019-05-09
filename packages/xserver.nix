@@ -17,6 +17,11 @@ in
     desktopManager.xterm.enable = false;
   };
 
+  services.dbus = {
+    enable = true;
+    packages = [ pkgs.gnome3.dconf ];
+  };
+
   environment.systemPackages = with pkgs; [
     xorg.xhost
   ];

@@ -9,6 +9,7 @@
 
       # Xserver
       ../../packages/xserver.nix
+      ../../packages/user/desktop/dconf.nix
       ../../packages/user/desktop/i3.nix
       ../../packages/user/desktop/gtk.nix
 
