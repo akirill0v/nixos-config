@@ -4,7 +4,6 @@ let
   secrets = (import ../../private/secrets.nix);
 in
 {
-
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     # Visual Studio Code
     unstable.vscode

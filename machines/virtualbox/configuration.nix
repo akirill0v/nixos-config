@@ -18,6 +18,7 @@
       #../../packages/user/development.nix
       ../../packages/user/fonts.nix
       ../../packages/user/gnupg.nix
+      ../../packages/user/ide/spacemacs.nix
     ];
 
   # Boot settings
