@@ -22,12 +22,12 @@ in
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      nerdfonts
+      # nerdfonts
       font-awesome_5
     ];
   };
 
-  
+
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     # character map viewer
     gucharmap
