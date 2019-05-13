@@ -6,6 +6,8 @@ After install and rebooting
 
 ### Add channels
 
+Add unstable channel
+
 ```
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable unstable
 ```
