@@ -22,8 +22,14 @@ in
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      # nerdfonts
+      nerdfonts
       font-awesome_5
+      fira-code
+      fira-code-symbols
+      fira-mono
+      dejavu_fonts
+      liberation_ttf
+      noto-fonts
     ];
   };
 
