@@ -10,8 +10,14 @@ in
     pointerCursor = {
       package = pkgs.vanilla-dmz;
       name = "Vanilla-DMZ";
-      size = 48;
+      size = 38;
     };
+
+    profileExtra =
+    ''
+      xrdb -merge ~/.extend.Xresources
+      bass source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+    '';
    };
 
    gtk = {
@@ -19,5 +25,21 @@ in
      theme = { name = "Arc-Dark"; package = pkgs.arc-theme; };
      iconTheme = { name = "Paper"; package = pkgs.paper-icon-theme; };
    };
+
+   qt = {
+    enable = false;
+    useGtkTheme = true;
+   };
+
+   xresources.properties = {
+    "Xft.antialias" = 1;
+    "Xft.autohint" = 0;
+    "Xft.hinting" = 1;
+    "Xft.hintstyle" = "hintfull";
+    "Xft.lcdfilter" = "lcddefault";
+    "Xcursor.theme" = "breeze_cursors";
+    "Xcursor.size" = 38;
+   };
+
  };
 }
