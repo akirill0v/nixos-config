@@ -9,8 +9,9 @@
       Section "InputClass"
         Identifier       "Enable libinput for TrackPoint"
         MatchIsTouchpad  "on"
+	      MatchDevicePath "/dev/input/event*"
         Driver           "libinput"
-        Option "NaturalScrolling" "true"
+	      Option "NaturalScrolling" "1"
       EndSection
     '';
   };

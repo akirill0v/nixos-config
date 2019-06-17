@@ -16,24 +16,7 @@ in
 
     # API
     unstable.postman
-
-    # Misc (TODO: split to categories)
-    aspell
-    aria2
-    awscli
-    cmake
-    # coq
-    gcc
-    gdb
-    go
-    gnumake
-    ispell
-    jq
-    patchelf
-    sqlite
-    valgrind
-    vscode
-    z3
+    insomnia
   ];
 
   environment.etc = {

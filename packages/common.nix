@@ -21,6 +21,7 @@
     graphviz
     sqlite
     mu
+    killall
 
     # calculator
     bc # Shell calculator
@@ -28,5 +29,23 @@
 
     # password managment
     enpass
+
+    # Misc (TODO: split to categories)
+    aspell
+    aria2
+    awscli
+    cmake
+    # coq
+    gcc
+    gdb
+    go
+    gnumake
+    ispell
+    jq
+    patchelf
+    sqlite
+    valgrind
+    vscode
+    z3
   ];
 }

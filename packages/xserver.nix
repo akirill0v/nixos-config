@@ -5,6 +5,7 @@ let
 in
 {
   # Enable the X11 windowing system.
+  hardware.brightnessctl.enable = true;
   services.xserver = {
     enable = true;
 
@@ -22,9 +23,14 @@ in
     packages = [ pkgs.gnome3.dconf ];
   };
 
+  programs = {
+    light.enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     arandr
     xorg.xhost
+    xorg.xbacklight
     xbindkeys
     xbindkeys-config
   ];

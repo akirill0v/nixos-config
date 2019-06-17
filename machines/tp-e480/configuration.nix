@@ -44,5 +44,6 @@
         fsType = "f2fs";
       };
 
+  powerManagement.powertop.enable = true;
   system.stateVersion = "19.03"; # Did you read the comment?
 }

@@ -5,5 +5,6 @@ in
 {
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     pavucontrol
+    volumeicon
   ];
 }

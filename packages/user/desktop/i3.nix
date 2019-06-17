@@ -22,6 +22,7 @@ in
   home-manager.users.${secrets.username} = {
     home.packages = with pkgs; [
       unstable.i3lock-pixeled
+      networkmanager_dmenu
     ];
     xsession = {
       enable = true;
@@ -35,9 +36,10 @@ in
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
             { command = "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle,ctrl:nocaps"; always = true; notification = false; }
-            # { command = "xinput set-prop 11 \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
-            # { command = "xinput set-prop 11 \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
-            # { command = "emacs --daemon"; always = false; notification = false; }
+            { command = "xinput set-prop 11 \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
+            { command = "xinput set-prop 11 \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
+            { command = "emacs --daemon"; always = false; notification = false; }
+            { command = "volumeicon"; always = false; notification = false; }
             # { command = settings.desktop.xrandr-command; }
             # { command = "feh --bg-fill ~/InSync/Wallpapers/UltraWide/vnervnkh5ecy.jpg"; always = true; notification = false; }
             # { command = "feh --bg-fill --randomize ~/InSync/Wallpapers/*"; always = true; notification = false; }
@@ -58,22 +60,33 @@ in
             "${modifier}+d" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
             "Control+space" = "exec rofi -show run -font \"Fira Code 13\"";
             "Control+Return" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
-            "${modifier}+shift+l" = "exec i3lock-pixeled ";
+            "Control+Shift+l" = "exec i3lock-pixeled";
+            "Control+Shift+e" = "exec --no-startup-id emacsclient -c $HOME/org/agenda.org;focus";
 
             "${modifier}+Shift+q" = "kill";
 
-            "${modifier}+Left" = "focus left";
-            "${modifier}+Down" = "focus down";
-            "${modifier}+Up" = "focus up";
+            "${modifier}+Left"  = "focus left";
+            "${modifier}+Down"  = "focus down";
+            "${modifier}+Up"    = "focus up";
             "${modifier}+Right" = "focus right";
 
-            "${modifier}+Shift+Left" = "move left";
-            "${modifier}+Shift+Down" = "move down";
-            "${modifier}+Shift+Up" = "move up";
+            "${modifier}+h" = "focus left";
+            "${modifier}+j" = "focus down";
+            "${modifier}+k" = "focus up";
+            "${modifier}+l" = "focus right";
+
+            "${modifier}+Shift+Left"  = "move left";
+            "${modifier}+Shift+Down"  = "move down";
+            "${modifier}+Shift+Up"    = "move up";
             "${modifier}+Shift+Right" = "move right";
 
-            "${modifier}+h" = "split h";
-            "${modifier}+v" = "split v";
+            "${modifier}+Shift+h"  = "move left";
+            "${modifier}+Shift+j"  = "move down";
+            "${modifier}+Shift+k"    = "move up";
+            "${modifier}+Shift+l" = "move right";
+
+            # "${modifier}+h" = "split h";
+            # "${modifier}+v" = "split v";
             "${modifier}+f" = "fullscreen toggle";
 
             "${modifier}+s" = "layout stacking";
@@ -130,6 +143,12 @@ in
             "${modifier}+Shift+e" = "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
 
             "${modifier}+r" = "mode resize";
+
+            "XF86AudioRaiseVolume" = "exec amixer -q sset Master 5%+";
+            "XF86AudioLowerVolume" = "exec amixer -q sset Master 5%-";
+            "XF86AudioMute"        = "exec amixer -q sset Master toggle";
+            "XF86MonBrightnessUp"   = "exec light -A 5";
+            "XF86MonBrightnessDown" = "exec light -U 5";
           };
         }; 
       };

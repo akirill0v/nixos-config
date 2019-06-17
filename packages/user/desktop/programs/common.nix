@@ -16,6 +16,7 @@ in
     # file managers
     ranger # shell
     gnome3.nautilus # gui
+    mucommander
 
     # Unzippers
     unzip

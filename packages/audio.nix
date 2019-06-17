@@ -4,7 +4,10 @@ let
   secrets = (import ../private/secrets.nix);
 in
 {
-  sound.enable = true;
+  sound = {
+    enable = true;
+    mediaKeys.enable = true;
+  };
   # hardware.pulseaudio.enable = true;
   hardware.pulseaudio = {
     enable = true;
@@ -14,6 +17,7 @@ in
     extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
   environment.systemPackages = with pkgs; [
+    volumeicon
     pavucontrol
   ];
 }
