@@ -11,5 +11,5 @@
     boot.supportedFilesystems = [ "ntfs" ];
 
     # Timezone
-    time.timeZone = "CET";
+    time.timeZone = "Europe/Saratov";
 }
