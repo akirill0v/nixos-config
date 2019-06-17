@@ -14,7 +14,7 @@ in
         substitutions = "combi";
       };
       defaultFonts = {
-        monospace = [ "Inconsolata Nerd Font" ];
+        monospace = [ "Fira Code" ];
       };
     };
 
@@ -22,14 +22,20 @@ in
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      nerdfonts
-      font-awesome_5
+      # nerdfonts
+      corefonts
+      dejavu_fonts
       fira-code
       fira-code-symbols
       fira-mono
-      dejavu_fonts
+      font-awesome_4
+      font-awesome_5
+      inconsolata
       liberation_ttf
       noto-fonts
+      symbola
+      ubuntu_font_family
+      unifont
     ];
   };
 
