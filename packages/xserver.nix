@@ -24,5 +24,7 @@ in
 
   environment.systemPackages = with pkgs; [
     xorg.xhost
+    xbindkeys
+    xbindkeys-config
   ];
 }

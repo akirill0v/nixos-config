@@ -25,5 +25,8 @@
     # calculator
     bc # Shell calculator
     libqalculate # Improved calculator
+
+    # password managment
+    enpass
   ];
 }
