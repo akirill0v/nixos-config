@@ -101,7 +101,7 @@ in
 
           modules-left = ["i3" "xwindow"];
           modules-center = ["date"];
-          modules-right = ["memory2" "cpu2"];
+          modules-right = ["battery" "memory2" "cpu2"];
 
           separator = "|";
 
@@ -176,6 +176,47 @@ in
           format-foreground = "\${colors.foreground}";
           format-background = "\${colors.background}";
         };
+
+        # Module Battery
+        "module/battery" = {
+          type    = "internal/battery";
+          battery = "BAT0";
+          adapter = "AC0";
+          full-at = "100";
+
+          format-charging            = "<animation-charging> <label-charging>";
+          label-charging             = " %percentage%%";
+          format-charging-foreground = "\${colors.foreground}";
+          format-charging-background = "\${colors.background}";
+          format-charging-underline  = "#a3c725";
+
+          format-discharging            = "<ramp-capacity> <label-discharging>";
+          label-discharging             = " %percentage%%";
+          format-discharging-underline  = "#c7ae25";
+          format-discharging-foreground = "\${colors.foreground}";
+          format-discharging-background = "\${colors.background}";
+
+          format-full-prefix            = " ";
+          format-full-prefix-foreground = "#a3c725";
+          format-full-underline         = "#a3c725";
+          format-foreground             = "\${colors.foreground}";
+          format-background             = "\${colors.background}";
+
+          ramp-capacity-0 = "";
+          ramp-capacity-1 = "";
+          ramp-capacity-2 = "";
+          ramp-capacity-3 = "";
+          ramp-capacity-4 = "";
+          ramp-capacity-foreground = "#c7ae25";
+
+          animation-charging-0 = "";
+          animation-charging-1 = "";
+          animation-charging-2 = "";
+          animation-charging-3 = "";
+          animation-charging-4 = "";
+          animation-charging-foreground = "#a3c725";
+          animation-charging-framerate  = "750";
+        };
       };
 
       extraConfig = ''
@@ -223,48 +264,6 @@ in
         bar-indicator = |
         bar-fill = ─
         bar-empty = ─
-
-        ################################################################################
-
-        [module/battery]
-        ;https://github.com/jaagr/polybar/wiki/Module:-battery
-        type = internal/battery
-        battery = BAT0
-        adapter = AC0
-        full-at = 100
-
-        format-charging = <animation-charging> <label-charging>
-        label-charging =  %percentage%%
-        format-charging-foreground = ''${colors.foreground}
-        format-charging-background = ''${colors.background}
-        format-charging-underline = #a3c725
-
-        format-discharging = <ramp-capacity> <label-discharging>
-        label-discharging =  %percentage%%
-        format-discharging-underline = #c7ae25
-        format-discharging-foreground = ''${colors.foreground}
-        format-discharging-background = ''${colors.background}
-
-        format-full-prefix = " "
-        format-full-prefix-foreground = #a3c725
-        format-full-underline = #a3c725
-        format-foreground = ''${colors.foreground}
-        format-background = ''${colors.background}
-
-        ramp-capacity-0 = 
-        ramp-capacity-1 = 
-        ramp-capacity-2 = 
-        ramp-capacity-3 = 
-        ramp-capacity-4 = 
-        ramp-capacity-foreground = #c7ae25
-
-        animation-charging-0 = 
-        animation-charging-1 = 
-        animation-charging-2 = 
-        animation-charging-3 = 
-        animation-charging-4 = 
-        animation-charging-foreground = #a3c725
-        animation-charging-framerate = 750
 
         ################################################################################
 

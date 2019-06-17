@@ -35,8 +35,8 @@ in
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
             { command = "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle,ctrl:nocaps"; always = true; notification = false; }
-            # { command = "xinput set-prop 11 \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
             # { command = "xinput set-prop 11 \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
+            # { command = "xinput set-prop 11 \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
             # { command = "emacs --daemon"; always = false; notification = false; }
             # { command = settings.desktop.xrandr-command; }
             # { command = "feh --bg-fill ~/InSync/Wallpapers/UltraWide/vnervnkh5ecy.jpg"; always = true; notification = false; }
@@ -56,6 +56,8 @@ in
             "${modifier}+b" = "exec ${browser}";
 
             "${modifier}+d" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
+            "Control+space" = "exec rofi -show run -font \"Fira Code 13\"";
+            "Control+Return" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
             "${modifier}+shift+l" = "exec i3lock-pixeled ";
 
             "${modifier}+Shift+q" = "kill";
