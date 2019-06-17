@@ -12,4 +12,5 @@
 
     # Timezone
     time.timeZone = "Europe/Saratov";
+    services.ntp.enable = true;
 }
