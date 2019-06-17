@@ -7,6 +7,8 @@
       /etc/nixos/hardware-configuration.nix
       ../users.nix
       ../packages/common.nix
+      ../packages/audio.nix
+      ../packages/bluetooth.nix
     ];
     
     nixpkgs.config = {

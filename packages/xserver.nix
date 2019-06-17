@@ -23,6 +23,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    arandr
     xorg.xhost
     xbindkeys
     xbindkeys-config

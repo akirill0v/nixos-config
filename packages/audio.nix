@@ -4,12 +4,16 @@ let
   secrets = (import ../private/secrets.nix);
 in
 {
+  sound.enable = true;
+  # hardware.pulseaudio.enable = true;
   hardware.pulseaudio = {
     enable = true;
-    support32Bit = true; 
     package = pkgs.pulseaudioFull;
 
     # Extra bluetooth packages
-    # extraModules = [ pkgs.pulseaudio-modules-bt ];
+    extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
+  environment.systemPackages = with pkgs; [
+    pavucontrol
+  ];
 }
