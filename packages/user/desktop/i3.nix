@@ -16,6 +16,7 @@ in
       ./programs/termite.nix
       ./programs/rofi.nix
       ./programs/polybar.nix
+      ./programs/toggl.nix
     ];
 
   home-manager.users.${secrets.username} = {

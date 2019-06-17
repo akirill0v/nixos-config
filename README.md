@@ -8,6 +8,8 @@ After install and rebooting
 
 ```
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable unstable
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+sudo nix-channel --update
 ```
 
 ### Mount SSH keys drive
