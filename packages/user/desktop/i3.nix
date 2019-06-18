@@ -23,6 +23,7 @@ in
     home.packages = with pkgs; [
       unstable.i3lock-pixeled
       networkmanager_dmenu
+      xfce.xfce4-notifyd
     ];
     xsession = {
       enable = true;

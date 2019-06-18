@@ -25,6 +25,8 @@ in
 
   programs = {
     light.enable = true;
+    nm-applet.enable = true;
+    command-not-found.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
