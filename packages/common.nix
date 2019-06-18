@@ -43,6 +43,7 @@
     ispell
     jq
     patchelf
+    openvpn
     sqlite
     valgrind
     vscode

@@ -18,6 +18,7 @@
       ../../packages/user/desktop/i3.nix
       ../../packages/user/desktop/gtk.nix
       ./trackpad.nix
+      ./intel.nix
 
       # Packages
       ../../packages/user/common.nix
@@ -36,7 +37,10 @@
   networking = {
     hostName = "alex-tp-e480";
     firewall.enable = false;
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      packages = [ pkgs.networkmanager_openvpn ];
+    };
   };
 
     fileSystems."/work" =
