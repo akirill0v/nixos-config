@@ -14,4 +14,11 @@
       intel-media-driver # only available starting nixos-19.03 or the current nixos-unstable
     ];
   };
+
+  services.xserver = {
+    videoDrivers = [ "intel" ];
+    screenSection = ''
+      Option "TripleBuffer" "On"
+    '';
+  };
 }

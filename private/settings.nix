@@ -2,7 +2,7 @@
   desktop = {
     xrandr-command = "xrandr";
     polybar = {
-      top-monitor = "eDP-1";
+      top-monitor = "eDP1";
       height = "20";
       font1-size = "14";
       font2-size = "14";
