@@ -70,9 +70,9 @@ in
 
         # Top bar
         "bar/top" = {
-          monitor = "${settings.desktop.polybar.top-monitor}";
+          #monitor = "${settings.desktop.polybar.top-monitor}";
 
-          monitor-strict = false;
+          #monitor-strict = false;
           override-redirect = false;
           bottom = false;
           fixed-center = true;

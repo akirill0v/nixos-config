@@ -37,8 +37,8 @@ in
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
             { command = "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle,ctrl:nocaps"; always = true; notification = false; }
-            { command = "xinput set-prop 11 \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
-            { command = "xinput set-prop 11 \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
+            { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
+            { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
             { command = "emacs --daemon"; always = false; notification = false; }
             { command = "volumeicon"; always = false; notification = false; }
             # { command = settings.desktop.xrandr-command; }
@@ -148,6 +148,8 @@ in
             "XF86AudioRaiseVolume" = "exec amixer -q sset Master 5%+";
             "XF86AudioLowerVolume" = "exec amixer -q sset Master 5%-";
             "XF86AudioMute"        = "exec amixer -q sset Master toggle";
+            "XF86AudioMicMute"     = "exec amixer -q sset Capture toggle";
+
             "XF86MonBrightnessUp"   = "exec light -A 5";
             "XF86MonBrightnessDown" = "exec light -U 5";
           };

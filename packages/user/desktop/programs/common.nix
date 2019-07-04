@@ -8,11 +8,6 @@ in
     google-chrome
     firefox
 
-    # chat
-    spotify
-    #discord
-    slack
-
     # file managers
     ranger # shell
     gnome3.nautilus # gui

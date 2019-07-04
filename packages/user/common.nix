@@ -9,6 +9,7 @@ in
     ./git.nix
     ./fish.nix
     ./gnupg.nix
+    ./chat.nix
   ];
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     gnupg

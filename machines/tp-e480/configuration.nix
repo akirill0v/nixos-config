@@ -48,6 +48,12 @@
         fsType = "f2fs";
       };
 
+    swapDevices =
+      [ {
+        device = "/var/swapfile";
+        size = 4096;
+      } ];
+
   powerManagement.powertop.enable = true;
   system.stateVersion = "19.03"; # Did you read the comment?
 }
