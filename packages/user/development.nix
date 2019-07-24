@@ -11,12 +11,18 @@ in
     # Node
     unstable.nodejs-10_x
 
+    # Rust
+    rustup
+
     # files
     filezilla
 
     # API
     unstable.postman
     insomnia
+
+    # cli tools
+    circleci-cli
   ];
 
   environment.etc = {

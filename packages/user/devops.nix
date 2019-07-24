@@ -1,10 +1,12 @@
 { config, pkgs, ... }:
 
 { environment.systemPackages = with pkgs; [
-    docker-compose
-    click
-    kubectl
+    unstable.docker-compose
+    unstable.click
+    unstable.kubectl
     kubectx
-    kubernetes-helm
+    unstable.kubernetes-helm
+    ansible
+    # helm
   ];
 }

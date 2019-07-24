@@ -7,6 +7,7 @@ in
     # browsers
     google-chrome
     firefox
+    tor-browser-bundle-bin
 
     # file managers
     ranger # shell
@@ -19,6 +20,11 @@ in
     # viewers
     zathura # PDF
     feh # image viewer
+    evince # Pdf viewer
+    green-pdfviewer
+
+    # meeting
+    zoom-us
 
     # screenshots
     shutter

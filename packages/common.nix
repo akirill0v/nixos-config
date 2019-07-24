@@ -30,7 +30,13 @@
     # password managment
     enpass
 
+    # Wine
+    (wine.override { wineBuild = "wineWow"; })
+    winetricks
+
     # Misc (TODO: split to categories)
+    bind
+    binutils-unwrapped
     aspell
     aria2
     awscli
@@ -48,5 +54,7 @@
     valgrind
     vscode
     z3
+    xclip
+    gvfs
   ];
 }

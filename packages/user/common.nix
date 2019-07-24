@@ -15,5 +15,6 @@ in
     gnupg
     pass
     keybase
+    android-file-transfer
   ];
 }
