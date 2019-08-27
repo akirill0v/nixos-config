@@ -4,7 +4,7 @@ let
   settings = (import ../../../private/settings.nix);
   modifier = "Mod4";
   move = "50px";
-  terminal = "alacritty";
+  terminal = "alacritty --config-file /etc/alacritty.yml";
   browser = "google-chrome-stable";
   secrets = (import ../../../private/secrets.nix);
 in
@@ -13,9 +13,9 @@ in
     [
       # Programs
       ./programs/common.nix
-      ./programs/termite.nix
-      ./programs/rofi.nix
       ./programs/polybar.nix
+      ./programs/rofi.nix
+      ./programs/termite.nix
       ./programs/toggl.nix
     ];
 
@@ -36,6 +36,7 @@ in
 
           startup = [
             { command = "systemctl --user restart polybar"; always = true; notification = false; }
+            { command = "feh --randomize --bg-fill ~/.wallpaper/*"; always = true; notification = false; }
             { command = "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle,ctrl:nocaps"; always = true; notification = false; }
             { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
             { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Tapping Enabled\" 1"; always = true; notification = false; }

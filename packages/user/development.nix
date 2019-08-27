@@ -19,7 +19,7 @@ in
 
     # API
     unstable.postman
-    insomnia
+    unstable.insomnia
 
     # cli tools
     circleci-cli

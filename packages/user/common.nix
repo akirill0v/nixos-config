@@ -6,6 +6,7 @@ in
   imports =
   [
     # Programs
+    ./dotfiles.nix
     ./git.nix
     ./fish.nix
     ./gnupg.nix

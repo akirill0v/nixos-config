@@ -31,6 +31,7 @@ in
 
     # misc
     bat
+    feh
 
     # Diff
     gnome3.meld
@@ -39,7 +40,7 @@ in
     vlc
 
     #terminals
-    alacritty
+    unstable.alacritty
     rxvt_unicode
   ];
 }
