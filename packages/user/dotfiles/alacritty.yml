@@ -11,9 +11,9 @@ window:
   decorations: full
 
 scrolling:
-  history: 10000
+  history: 40000
   multiplier: 3
-  faux_multiplier: 3
+  multiplier: 3
   auto_scroll: true # TODO
 
 # Display tabs using this many cells (changes require restart)

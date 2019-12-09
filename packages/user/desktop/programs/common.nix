@@ -7,7 +7,7 @@ in
     # browsers
     google-chrome
     firefox
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin
 
     # file managers
     ranger # shell

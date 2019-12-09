@@ -7,6 +7,6 @@ in
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
       slack
       tdesktop
-      skypeforlinux
+      # skypeforlinux
   ];
 }

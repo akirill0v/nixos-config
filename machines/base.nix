@@ -1,4 +1,3 @@
-
 { config, pkgs, ... }:
 
 {
@@ -11,7 +10,7 @@
       ../packages/bluetooth.nix
       ../packages/user/development.nix
     ];
-    
+
     nixpkgs.config = {
        # Alow unfree packages
       allowUnfree = true;
@@ -23,7 +22,7 @@
         };
       };
     };
-    
+
     # Enable OpenSSH
     services.openssh = {
       enable = true;
