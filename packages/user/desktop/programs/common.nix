@@ -32,6 +32,7 @@ in
     # misc
     bat
     feh
+    fd
 
     # Diff
     gnome3.meld

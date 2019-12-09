@@ -44,16 +44,16 @@
   };
 
     fileSystems."/work" =
-      { device = "/dev/disk/by-uuid/6b2e1d0a-00ef-449a-b18b-c9e0bd545619";
-        fsType = "f2fs";
+      { device = "/dev/disk/by-label/work";
+        fsType = "ext4";
       };
 
     swapDevices =
       [ {
         device = "/var/swapfile";
-        size = 4096;
+        size = 8192;
       } ];
 
   powerManagement.powertop.enable = true;
-  system.stateVersion = "19.03"; # Did you read the comment?
+  system.stateVersion = "19.09"; # Did you read the comment?
 }

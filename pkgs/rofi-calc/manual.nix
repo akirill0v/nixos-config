@@ -2,7 +2,7 @@ with import <nixpkgs> {};
 
 stdenv.mkDerivation rec {
   name = "rofi-calc-${version}";
-  version = "v0.1";
+  version = "v1.5";
 
     src = fetchFromGitHub {
       owner = "svenstaro";

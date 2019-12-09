@@ -29,10 +29,7 @@
 
     # password managment
     enpass
-
-    # Wine
-    (wine.override { wineBuild = "wineWow"; })
-    winetricks
+    bitwarden
 
     # Misc (TODO: split to categories)
     bind
@@ -52,7 +49,6 @@
     openvpn
     sqlite
     valgrind
-    vscode
     z3
     xclip
     gvfs

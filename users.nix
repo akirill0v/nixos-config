@@ -6,7 +6,7 @@ in
 {
   imports = [
     # Home manager import
-    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-19.03.tar.gz}/nixos"
+    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos"
   ];
 
   # Users
@@ -30,14 +30,14 @@ in
       }))
     ];
   };
-  
+
   # Home manager
   home-manager.users.${secrets.username} = {
     programs.ssh = {
       enable = true;
       forwardAgent = true;
     };
-    
+
     services.gpg-agent = {
       enable = true;
       enableSshSupport = true;

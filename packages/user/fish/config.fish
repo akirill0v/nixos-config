@@ -12,3 +12,6 @@ set PATH $NPM_CONFIG_PREFIX/bin $PATH
 
 # TERMINAL
 set -xg TERMINAL xterm-color
+
+# EDITOR
+set -xg EDITOR vim

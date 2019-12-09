@@ -7,6 +7,5 @@
     kubectx
     unstable.kubernetes-helm
     ansible
-    # helm
   ];
 }

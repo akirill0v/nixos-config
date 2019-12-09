@@ -8,9 +8,6 @@ in
     # Visual Studio Code
     unstable.vscode
 
-    # Node
-    unstable.nodejs-10_x
-
     # Rust
     rustup
 
@@ -18,7 +15,6 @@ in
     filezilla
 
     # API
-    unstable.postman
     unstable.insomnia
 
     # cli tools
@@ -88,7 +84,7 @@ in
         email = saratovsource@gmail.com
         name = Alexander Kirillov
       [github]
-        user = saratovsource
+        user = akirill0v
 
       '';
     gitignore.text = ''
