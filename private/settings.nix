@@ -9,7 +9,7 @@
     };
   };
   spacemacs = {
-    rev = "ccd6c48d462eef17fc0375c45b9f935e69c460e8";
+    rev = "76245081d641588aa24827374c975654bb13180a";
     sha256 = "1g4pi0swmg214kndj85hj50ccmckni7piprsxfdzdfhg87s0avw7";
   };
 }

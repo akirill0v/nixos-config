@@ -17,7 +17,7 @@
 
       # Create an alias for the unstable channel
       packageOverrides = pkgs: {
-        unstable = import <unstable> {
+        unstable = import <nixos-unstable> {
           config = config.nixpkgs.config;
         };
       };
@@ -29,6 +29,10 @@
       passwordAuthentication = false;
     };
 
+    # Timezone
+    time.timeZone = "Europe/Saratov";
+    services.ntp.enable = true;
+
     # Set channel to unstable
-    system.autoUpgrade.channel = "https://nixos.org/channels/nixos-stable/";
+    # system.autoUpgrade.channel = "https://nixos.org/channels/nixos-stable/";
 }

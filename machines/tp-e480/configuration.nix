@@ -8,7 +8,7 @@
   #]);
   imports = [
       <nixos-hardware/lenovo/thinkpad/t480s>
-      ../base-workstation.nix
+      ../base.nix
       # virtualization
       ../../packages/docker.nix
 
@@ -23,7 +23,7 @@
       # Packages
       ../../packages/user/common.nix
       ../../packages/user/devops.nix
-      #../../packages/user/development.nix
+      ../../packages/user/development.nix
       ../../packages/user/fonts.nix
       ../../packages/user/gnupg.nix
       ../../packages/user/ide/spacemacs.nix
