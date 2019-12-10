@@ -28,7 +28,7 @@ in
 
    qt = {
     enable = false;
-    useGtkTheme = true;
+    platformTheme = "gnome";
    };
 
    xresources.properties = {

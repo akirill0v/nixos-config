@@ -52,5 +52,6 @@
     z3
     xclip
     gvfs
+    gparted
   ];
 }

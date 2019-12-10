@@ -71,6 +71,9 @@ This function should only modify configuration layer settings."
      ;; Include emojis into everything
      emoji
 
+     ;; Nixos
+     nixos
+
      ;; Open Magit git client full screen (quit restores previous layout)
      ;; Add github support (using magithub)
      ;; Highlight working copy changes

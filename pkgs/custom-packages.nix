@@ -7,7 +7,7 @@ rec {
   pkgconfig = import ./pkgs/pkgconfig {
     inherit (pkgs) stdenv fetchurl automake;
   };
-  
+
   rofi-calc = import ./pkgs/rofi-calc {
     # The remaining dependencies come from Nixpkgs
     inherit (pkgs) stdenv fetchurl glib file perl;

@@ -40,8 +40,9 @@ in
             { command = "setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle,ctrl:nocaps"; always = true; notification = false; }
             { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Natural Scrolling Enabled\" 1"; always = true; notification = false; }
             { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
-            { command = "emacs --daemon"; always = false; notification = false; }
             { command = "volumeicon"; always = false; notification = false; }
+            { command = "emacs --bg-daemon=server"; always = false; notification = false; }
+            # { command = "emacs --daemon"; always = false; notification = false; }
             # { command = settings.desktop.xrandr-command; }
             # { command = "feh --bg-fill ~/InSync/Wallpapers/UltraWide/vnervnkh5ecy.jpg"; always = true; notification = false; }
             # { command = "feh --bg-fill --randomize ~/InSync/Wallpapers/*"; always = true; notification = false; }
@@ -154,7 +155,7 @@ in
             "XF86MonBrightnessUp"   = "exec light -A 5";
             "XF86MonBrightnessDown" = "exec light -U 5";
           };
-        }; 
+        };
       };
     };
   };

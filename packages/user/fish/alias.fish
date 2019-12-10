@@ -2,6 +2,7 @@ alias tig "tig --show-signature"
 alias vim nvim
 alias vi nvim
 alias nix-cleanup "sudo nix-env --delete-generations old && nix-collect-garbage -d"
+alias em "emacsclient -nw -t -s server"
 
 # Docker
 alias do "docker"
@@ -19,5 +20,5 @@ alias kg "kubectl get"
 alias kd "kubectl describe"
 
 function delline
-  sed -i "$argv[2]"d $argv[1] 
+  sed -i "$argv[2]"d $argv[1]
 end

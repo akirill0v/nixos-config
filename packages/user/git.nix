@@ -6,7 +6,7 @@ in
 {
   home-manager.users.${secrets.username}.programs.git = {
     enable = true;
-    userName  = "${secrets.fullName}";
+    userName  = "${secrets.github}";
     userEmail = "${secrets.email}";
     extraConfig = {
       push = { default = "current"; };
@@ -14,10 +14,14 @@ in
       rebase = { autoStash = true; };
     };
     aliases = {
+        amend = "commit --amend";
+        br = "branch";
+
         co = "checkout";
         cob = "checkout -b";
 
         c = "commit --verbose";
+        ci = "commit";
         ca = "commit -a --verbose";
         cm = "commit -m";
         cam = "commit -a -m";
@@ -53,6 +57,8 @@ in
 
         # list aliases
         la = "\"!git config -l | grep alias | cut -c 7-\"";
+        up = "pull --rebase";
+        put = "push origin HEAD";
         upn = "pull --ff-only --all -p";
         upold = "pull --rebase --autostash";
         uplog = "\"!git pull --ff-only --all -p && git log --decorate @{1}..HEAD --pretty=format:'%C(yellow)%h %Cred[%an] %Creset%s'\"";

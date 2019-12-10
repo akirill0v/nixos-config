@@ -29,10 +29,14 @@
       ../../packages/user/ide/spacemacs.nix
   ];
 
+  boot.initrd = {
+    availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
+  };
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
+  boot.supportedFilesystems = ["ntfs"];
 
   networking = {
     hostName = "alex-tp-e480";
