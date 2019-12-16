@@ -31,10 +31,15 @@
     enpass
     bitwarden
 
+    # dictionaries
+    aspell
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.ru
+
     # Misc (TODO: split to categories)
     bind
     binutils-unwrapped
-    aspell
     aria2
     awscli
     cmake

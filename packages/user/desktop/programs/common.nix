@@ -23,6 +23,9 @@ in
     evince # Pdf viewer
     green-pdfviewer
 
+    # graphics
+    krita
+
     # meeting
     zoom-us
 
@@ -43,5 +46,8 @@ in
     #terminals
     unstable.alacritty
     rxvt_unicode
+
+    # backgrounds
+    unstable.variety
   ];
 }

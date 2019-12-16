@@ -11,6 +11,7 @@
       ../base.nix
       # virtualization
       ../../packages/docker.nix
+      ../../packages/virtualbox.nix
 
       # Xserver
       ../../packages/xserver.nix
@@ -36,7 +37,7 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
-  boot.supportedFilesystems = ["ntfs"];
+  boot.supportedFilesystems = ["ntfs" "btrfs"];
 
   networking = {
     hostName = "alex-tp-e480";
@@ -60,4 +61,5 @@
 
   powerManagement.powertop.enable = true;
   system.stateVersion = "19.09"; # Did you read the comment?
+
 }
