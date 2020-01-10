@@ -6,7 +6,7 @@ in
 {
   imports = [
     # Home manager import
-    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos"
+    "${builtins.fetchTarball https://github.com/akirill0v/home-manager/archive/release-19.09.updates.tar.gz}/nixos"
   ];
 
   # Users

@@ -23,13 +23,13 @@ in
     desktopManager.default = "none";
     desktopManager.xterm.enable = false;
 
-    xautolock = {
-      enable = true;
-      enableNotifier = true;
-      locker = ''${config.security.wrapperDir}/physlock'';
-      notifier =
-        ''${pkgs.libnotify}/bin/notify-send "Locking in 10 seconds"'';
-    };
+    # xautolock = {
+    #   enable = true;
+    #   enableNotifier = true;
+    #   locker = ''${config.security.wrapperDir}/physlock'';
+    #   notifier =
+    #     ''${pkgs.libnotify}/bin/notify-send "Locking in 10 seconds"'';
+    # };
   };
 
   services.dbus = {
@@ -37,10 +37,10 @@ in
     packages = [ pkgs.gnome3.dconf ];
   };
 
-  services.physlock = {
-    allowAnyUser = true;
-    enable = true;
-  };
+  # services.physlock = {
+  #   allowAnyUser = true;
+  #   enable = true;
+  # };
 
   services.autorandr = {
     enable = true;
@@ -59,5 +59,6 @@ in
     xorg.xbacklight
     xbindkeys
     xbindkeys-config
+    mate.mate-polkit
   ];
 }

@@ -15,3 +15,9 @@ set -xg TERMINAL xterm-color
 
 # EDITOR
 set -xg EDITOR vim
+
+direnv hook fish | source
+
+if test -z "$INSIDE_EMACS"
+    eval (starship init fish)
+end

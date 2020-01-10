@@ -43,6 +43,7 @@
     aria2
     awscli
     cmake
+    evince
     # coq
     gcc
     gdb
@@ -58,5 +59,12 @@
     xclip
     gvfs
     gparted
+    deluge
+    openssl
+    pkgconfig
+    alsaUtils
+    alsaLib
+    SDL2
+    direnv
   ];
 }

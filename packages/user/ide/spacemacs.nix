@@ -30,7 +30,8 @@ in
   };
 
   services.emacs = {
-    enable = true;
-    defaultEditor = true;
+    enable = false;
+    install = true;
+    defaultEditor = false;
   };
 }

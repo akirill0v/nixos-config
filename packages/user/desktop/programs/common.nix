@@ -14,6 +14,9 @@ in
     gnome3.nautilus # gui
     mucommander
 
+    # System
+    gparted
+
     # Unzippers
     unzip
 

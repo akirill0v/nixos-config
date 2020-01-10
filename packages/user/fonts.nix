@@ -33,6 +33,7 @@ in
       inconsolata
       liberation_ttf
       noto-fonts
+      powerline-fonts
       symbola
       ubuntu_font_family
       unifont

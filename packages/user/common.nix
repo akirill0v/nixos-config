@@ -11,6 +11,7 @@ in
     ./fish.nix
     ./gnupg.nix
     ./chat.nix
+    ./starship.nix
   ];
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     gnupg
