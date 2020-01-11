@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ../modules/module-list.nix
       ../users.nix
       ../packages/common.nix
       ../packages/audio.nix
