@@ -27,7 +27,10 @@ in
     green-pdfviewer
 
     # graphics
-    krita
+    unstable.krita
+    unstable.blender
+    unstable.gimp
+    unstable.inkscape
 
     # meeting
     zoom-us

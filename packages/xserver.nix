@@ -30,6 +30,10 @@ in
     #   notifier =
     #     ''${pkgs.libnotify}/bin/notify-send "Locking in 10 seconds"'';
     # };
+
+    wacom = {
+      enable = true;
+    };
   };
 
   services.dbus = {
