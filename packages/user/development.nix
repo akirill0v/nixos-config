@@ -45,6 +45,7 @@ in
 
       [commit]
         verbose = true
+        gpgsign = true
 
       [column]
         ui = auto
@@ -86,6 +87,7 @@ in
       [user]
         email = saratovsource@gmail.com
         name = Alexander Kirillov
+        signingkey = 9AF7DE963A23C7233690CFDFD7440BDBC8C63926
       [github]
         user = akirill0v
 
