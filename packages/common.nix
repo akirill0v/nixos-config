@@ -20,8 +20,11 @@
     ripgrep # Better than grep
     graphviz
     sqlite
-    mu
     killall
+
+    # Mail
+    mu
+    offlineimap
 
     # calculator
     bc # Shell calculator
@@ -30,6 +33,9 @@
     # password managment
     enpass
     bitwarden
+    pass
+    pass-otp
+    rofi-pass
 
     # dictionaries
     aspell
@@ -38,6 +44,7 @@
     aspellDicts.ru
 
     # Misc (TODO: split to categories)
+    isync
     bind
     binutils-unwrapped
     aria2
@@ -53,7 +60,9 @@
     jq
     patchelf
     openvpn
+    python3
     sqlite
+    sqlitebrowser
     valgrind
     z3
     xclip
@@ -66,5 +75,8 @@
     alsaLib
     SDL2
     direnv
+    simple-scan
+    screen
+    uucp
   ];
 }

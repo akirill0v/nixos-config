@@ -9,5 +9,6 @@
     kubectx
     unstable.kubernetes-helm
     ansible
+    rclone
   ];
 }

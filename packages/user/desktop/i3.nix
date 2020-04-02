@@ -42,7 +42,7 @@ in
             { command = "xinput set-prop \"Synaptics TM3383-002\" \"libinput Tapping Enabled\" 1"; always = true; notification = false; }
             { command = "volumeicon"; always = false; notification = false; }
             { command = "XDG_CURRENT_DESKTOP=i3 variety"; always = false; notification = false; }
-            { command = "emacs --bg-daemon=server"; always = false; notification = false; }
+            # { command = "emacs --bg-daemon=server"; always = false; notification = false; }
             # { command = settings.desktop.xrandr-command; }
             # { command = "feh --bg-fill ~/InSync/Wallpapers/UltraWide/vnervnkh5ecy.jpg"; always = true; notification = false; }
             # { command = "feh --bg-fill --randomize ~/InSync/Wallpapers/*"; always = true; notification = false; }
@@ -62,7 +62,7 @@ in
 
             "${modifier}+d" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
             "Control+space" = "exec rofi -show run -font \"Fira Code 13\"";
-            "Control+Return" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
+            # "Control+Return" = "exec rofi -show drun -show-icons -display-drun \"Launcher\"";
             "Control+Shift+l" = "exec i3lock-pixeled";
             "Control+Shift+e" = "exec --no-startup-id emacsclient -cs server;focus";
 

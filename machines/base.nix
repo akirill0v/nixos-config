@@ -10,6 +10,8 @@
       ../packages/audio.nix
       ../packages/bluetooth.nix
       ../packages/user/development.nix
+
+      # ../pkgs/custom-packages.nix
     ];
 
     nixpkgs.config = {

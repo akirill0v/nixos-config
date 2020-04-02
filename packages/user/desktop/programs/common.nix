@@ -25,6 +25,10 @@ in
     feh # image viewer
     evince # Pdf viewer
     green-pdfviewer
+    paperwork
+
+    # Calendar
+    minetime
 
     # graphics
     unstable.krita
@@ -55,5 +59,8 @@ in
 
     # backgrounds
     unstable.variety
+
+    # Obs studio
+    unstable.obs-studio
   ];
 }

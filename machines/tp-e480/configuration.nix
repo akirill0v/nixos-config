@@ -12,6 +12,7 @@
       # virtualization
       ../../packages/docker.nix
       ../../packages/virtualbox.nix
+      ../../packages/samba.nix
 
       # Xserver
       ../../packages/xserver.nix
@@ -27,7 +28,7 @@
       ../../packages/user/development.nix
       ../../packages/user/fonts.nix
       ../../packages/user/gnupg.nix
-      ../../packages/user/ide/spacemacs.nix
+      # ../../packages/user/ide/spacemacs.nix
   ];
 
   boot.initrd = {

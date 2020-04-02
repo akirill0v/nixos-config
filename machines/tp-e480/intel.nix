@@ -21,7 +21,14 @@
       extraConfig =
         "\n        [General]\n        Enable=Source,Sink,Media,Socket\n      ";
     };
+    sane = {
+      enable = true;
+      extraBackends = [pkgs.utsushi];
+    };
   };
+
+  # for Epson printer
+  services.udev.packages = [ pkgs.utsushi ];
 
   services.xserver = {
     videoDrivers = [ "intel" ];

@@ -8,8 +8,11 @@ in
     # Visual Studio Code
     unstable.vscode
 
+    # Emacs
+    unstable.emacs
+
     # Rust
-    rustup
+    unstable.rustup
 
     # files
     filezilla
@@ -18,7 +21,7 @@ in
     unstable.insomnia
 
     # cli tools
-    circleci-cli
+    unstable.circleci-cli
   ];
 
   environment.etc = {

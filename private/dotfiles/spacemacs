@@ -86,19 +86,20 @@ This function should only modify configuration layer settings."
      ;;github
 
      docker
-     helm
-     ;;(helm :variables
-     ;;      helm-enable-auto-resize nil
-     ;;      helm-position 'top  ; top, bottom, left, right
-     ;;      helm-use-frame-when-more-than-two-windows nil)
+     kubernetes
+     terraform
+     (helm :variables
+          helm-enable-auto-resize nil
+          helm-position 'top  ; top, bottom, left, right
+          helm-use-frame-when-more-than-two-windows nil)
 
      html
      javascript
      markdown
      multiple-cursors
 
-     ;; treemacs
-     neotree
+     treemacs
+     ;; neotree
 
      (org :variables
           org-enable-github-support t
@@ -133,12 +134,17 @@ This function should only modify configuration layer settings."
      (go :variables
          go-tab-width 2
          go-format-before-save t)
-     lsp
+     (lsp :variables
+          lsp-rust-server 'rust-analyzer)
      python
      ruby
      ruby-on-rails
+     sql
      (rust :variables
-           rust-backend 'lsp)
+           rust-backend 'lsp
+           indent-tabs-mode nil
+           tab-width 4
+           rust-indent-offset 4)
      )
 
    ;; List of additional packages that will be installed without being
@@ -151,6 +157,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(ubuntu-theme
                                       xclip
                                       flycheck-clj-kondo
+              direnv
                                       zenburn-theme)
 
    ;; A list of packages that cannot be updated.
@@ -431,7 +438,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil unicode symbols are displayed in the mode line.
    ;; If you use Emacs as a daemon and wants unicode characters only in GUI set
    ;; the value to quoted `display-graphic-p'. (default t)
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols 'display-graphic-p
 
    ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
@@ -456,10 +463,13 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers '(:visual t
+   dotspacemacs-line-numbers '(:visual nil
+                               :relative nil
                                :disabled-for-modes dired-mode
                                                    doc-view-mode
                                                    pdf-view-mode
+                                                   org-mode
+                                                   text-mode
                                :size-limit-kb 1000)
 
 
@@ -483,14 +493,14 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
    ;; like \"~/.emacs.d/server\". It has no effect if
    ;; `dotspacemacs-enable-server' is nil.
    ;; (default nil)
-   dotspacemacs-server-socket-dir nil
+   dotspacemacs-server-socket-dir "~/.emacs.d/server"
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
@@ -903,6 +913,15 @@ before packages are loaded."
   ;; End of Web-mode configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Configuration for direnv
+  ;;
+  (direnv-mode)
+  ;;
+  ;; End of dienv
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

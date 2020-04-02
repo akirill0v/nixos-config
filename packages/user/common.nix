@@ -15,7 +15,6 @@ in
   ];
   home-manager.users.${secrets.username}.home.packages = with pkgs; [
     gnupg
-    pass
     keybase
     android-file-transfer
   ];

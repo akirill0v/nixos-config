@@ -19,6 +19,7 @@ in
       "audio"
       "docker"
       "networkmanager"
+      "scanner"
       "video"
       "wheel"
       "libvirtd"
